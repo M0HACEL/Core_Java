@@ -1,0 +1,8 @@
+public class Main {
+    public static void main(String[] args) {
+        greeting("Mohacel Hosen");
+    }
+     public static void greeting(String name){
+        System.out.println( String.format("Welcome %s , It's a world of java",name) );
+    }
+}
