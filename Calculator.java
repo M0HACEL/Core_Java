@@ -1,8 +1,4 @@
-package Demo;
-
-import java.util.Scanner;
-
-public class Test {
+public class Calculator {
     public static void main(String[] args) {
         float num1,num2;
         char operation;
