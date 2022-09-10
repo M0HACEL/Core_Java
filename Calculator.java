@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Calculator {
     public static void main(String[] args) {
         float num1,num2;
