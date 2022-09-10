@@ -17,26 +17,36 @@ public class Test {
         operation = input.next().charAt(0);
 
 
-        calculate(num1, num2, operation);
+       float result = calculate(num1, num2, operation);
+       System.out.println(num1+" "+operation+" "+ num2+" = "+result);
 
         input.close();
     }
-    public static void calculate(float num1, float num2, char operation){
-        if(operation=='+'){
-            System.out.println(num1+" + "+num2+" = "+(num1+num2));
-        } else if (operation=='-') {
-            System.out.println(num1+" - "+num2+" = "+(num1-num2));
-        } else if (operation=='*') {
-            System.out.println(num1+" * "+num2+" = "+(num1*num2));
-        } else if (operation=='/') {
-            System.out.println(num1+" / "+num2+" = "+(num1/num2));
-        } else if (operation=='%') {
-            System.out.println(num1+" % "+num2+" = "+(num1%num2));
-        } else if (operation=='^') {
-            System.out.println(num1+" ^ "+num2+" = "+(Math.pow(num1,num2)));
-        }else {
-            System.out.println("Invalid Input");
-        }
-    }
+        public static float calculate(float num1, float num2, char operation){
+            float result=0;
 
+            switch (operation){
+                case '+':
+                    result = num1+num2;
+                    break;
+                case '-':
+                    result = num1-num2;
+                    break;
+                case '*':
+                    result = num1*num2;
+                    break;
+                case '/':
+                    result = num1/num2;
+                    break;
+                case '%':
+                    result = num1%num2;
+                    break;
+                case '^':
+                    result = (float) Math.pow(num1,num2);
+                    break;
+                default:
+                    System.out.println("Invalid Input!");
+            }
+            return result;
+        }
 }
